@@ -1,0 +1,83 @@
+	body {
+		font-family: Menlo, Consolas, monospace;
+    	padding: 0;
+    	margin: 0;
+    	height: 800px;
+    	overflow: auto;
+    }
+	.cover {
+		width: 100%;
+		height: 100%;
+		background: white;
+	}
+	.content {
+		width: 85%;
+		height: 100%;
+		margin:0 auto;
+		box-shadow: 0 0 10px rgba(0,0,0,0.7);
+	    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.7);
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,0.7);
+	    -ms-box-shadow: 0 0 10px rgba(0,0,0,0.7);
+	    -o-box-shadow: 0 0 10px rgba(0,0,0,0.7);
+		background: white;
+	}
+
+	header, footer {
+		background: red;
+	}
+	.treeView {
+		width: 100%;
+		height: 20%;
+		overflow: auto;
+	}
+	.work-place {
+		height: 100%;
+		background: grey;
+	}
+	.tree {
+		height: 40%;
+	}
+	.operation-Place {
+		height: 60%;
+		background: rgba(0,0,0,0.3);
+	}
+	.part1{
+		height: 110px;
+		vertical-align: middle;
+
+	}
+	.part2{
+		height: 70px;
+	}
+	
+
+
+	.item {
+		cursor: pointer;
+	}
+	.bold {
+		font-weight: bold;
+	}
+	ul {
+		padding-left: 1em;
+		line-height: 1.5em;
+		list-style-type: dot;
+	}
+	.level0{
+		margin-left: 20px;
+	}
+	.level1{
+		margin-left: 40px;
+	}
+	.level2{
+		margin-left: 60px;
+	}
+
+	.text{
+		display: inline-block;
+	}
+	.hidden {
+		display: none;
+		visibility: hidden;
+	} 
+	

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>TreeView</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+</head>
+<body>
+<script src="jquery-1.10.2.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="jquery.etree.js"></script>
+
+
+<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+
+
+<script type="text/javascript">
+		$(function(){
+			$('#q').etree({
+			url: 'tree_data.json',
+			createUrl: 'tree_data.json',
+			updateUrl: 'tree_data.json',
+			});
+</script>
+<div class="cover">
+	<div class="content">
+		<header>
+			TreeView v1.0.0
+		</header>
+		<div class="work-place">
+			<div class="treeView">
+				<br>
+				<ul id="q" class="easyui-tree">
+			        <li>
+			            <span>Folder</span>
+			            <ul>
+			                <li>
+			                    <span>Sub Folder 1</span>
+			                    <ul>
+			                        <li><span>File 11</span></li>
+			                        <li><span>File 12</span></li>
+			                        <li><span>File 13</span></li>
+			                    </ul>
+			                </li>
+			                <li><span>File 2</span></li>
+			                <li><span>File 3</span></li>
+			            </ul>
+			        </li>
+			        <li><span>File21</span></li>
+			    </ul>
+			</div>
+			<div class="operation-Place">
+				<div class="part1">
+				<br>
+					<div class="col-md-4">
+				      <label for="sel1">Операция</label>
+				      <select id="operations" class="form-control" id="sel1">
+				        <option data-id="-1">Выберите операцию</option>
+				      </select>
+				    </div>
+				    <div class="col-md-2">
+				    <button type="button" class="btn btn-default">Добавить</button>
+				    <br><br>
+				    <button type="button" class="btn btn-default">Удалить </button>
+				    <br><br>
+				    </div>
+				    <div class="col-md-2">
+				      <label for="sel1">Инструмент</label>
+				      <select class="form-control" id="sel1">
+				        <option data-id="-1">1</option>
+				        <option>2</option>
+				        <option>3</option>
+				        <option>4</option>
+				      </select>
+				    </div>
+				    <div class="col-md-2">
+				      <label for="sel1">Оснастка</label>
+				      <select class="form-control" id="sel1">
+				        <option data-id="-1">1</option>
+				        <option>2</option>
+				        <option>3</option>
+				        <option>4</option>
+				      </select>
+				      <br>
+				      <button type="button" class="btn btn-default">Принять </button>
+				    </div>
+				    <div class="col-md-2">
+				      <label for="sel1">Ср-ва контроля</label>
+				      <select class="form-control" id="sel1">
+				        <option>1</option>
+				        <option>2</option>
+				        <option>3</option>
+				        <option>4</option>
+				      </select>
+				    </div>
+				    <div class="col-md-2">
+				    
+					</div>
+				</div>
+				<br><br>
+				<div  class="part2">
+					<div >
+						<div class="col-md-2">
+					      <label for="sel1">Действие</label>
+					      <select class="form-control" id="sel1">
+					        <option>1</option>
+					        <option>2</option>
+					        <option>3</option>
+					        <option>4</option>
+					      </select>
+					    </div>
+					    <div class="col-md-2">
+					      <label for="sel1">Объект</label>
+					      <select class="form-control" id="sel1">
+					        <option>1</option>
+					        <option>2</option>
+					        <option>3</option>
+					        <option>4</option>
+					      </select>
+					    </div>
+					</div>
+					<div>
+						<div class="col-md-1">
+						    <label for="inputsm">Идент.</label>
+						    <input class="form-control input-sm" id="inputsm" type="text">
+						</div>
+						<div class="col-md-1">
+						    <label for="inputsm">Размер </label>
+						    <input class="form-control input-sm" id="inputsm" type="text">
+						</div>
+						<div class="col-md-1">
+						    <label for="inputsm">1</label>
+						    <input class="form-control input-sm" id="inputsm" type="text">
+						</div>
+						<div class="col-md-1">
+						    <label for="inputsm">Размер </label>
+						    <input class="form-control input-sm" id="inputsm" type="text">
+						</div>
+						<div class="col-md-1">
+							<label for="inputsm">2</label>
+						    <input class="form-control input-sm" id="inputsm" type="text">
+						</div>
+						<div class="col-md-1">
+						    <label for="inputsm">Размер </label>
+						    <input class="form-control input-sm" id="inputsm" type="text">
+						</div>
+						<div class="col-md-1">
+						    <label for="inputsm">3</label>
+						    <input class="form-control input-sm" id="inputsm" type="text">
+						</div>
+						<div class="col-md-1">
+						<br>
+							<button type="button" class="btn btn-default">Принять</button>
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+	 	
+		</div>
+		<footer>
+			TreeView v1.0.0
+		</footer>
+	</div>
+</div>
+
+
+<script>
+$('.tree-folder').removeClass('tree-folder');
+$('.tree-file').removeClass('tree-file');
+var Obj = {
+	operations: 0,
+	tree: 1
+};
+$.ajax({
+	type: "GET",
+	url: "operations.json",
+	dataType: "json",
+	success: function (result) { 
+	Obj.operations = result;
+	$(Obj.operations.Operations).each(function (index, value) { 
+	  $('#operations').append('<option data-id=' + $(this).attr("id") + '>' + $(this).attr('name') + '</option>');
+	});
+	}
+});
+
+$.ajax({
+	type: "GET",
+	url: "tree_data.json",
+	dataType: "json",
+	success: function (result) { 
+	Obj.tree = result;
+	console.log(Obj.tree);
+	$('.tree-folder').removeClass('tree-folder');
+	$('.tree-file').removeClass('tree-file');
+	}
+});
+
+Obj.tree.save = function() {
+var	tempNode = {
+		id:0,
+		text:'',
+		children:[{
+		}]
+	},
+	tree = [{
+	id:0,
+	text:'',
+	children:[{
+	}]
+}];
+
+var treeLength = $('.tree-node').length;	
+
+	if(false) {
+
+	}
+
+}
+$('.tree-folder').removeClass('tree-folder');
+$('.tree-file').removeClass('tree-file');
+
+//JSON.stringify();
+//JSON.parse();
+</script>	
+</body>
+</html>

@@ -1,0 +1,21 @@
+[{
+	"id":1,
+	"text":"Операция - Сверлильная",
+	"state":"closed",
+	"children":[{
+		"id":11,
+		"text":"operation "
+		},{
+		"id":12,
+		"text":"operation "
+		}]
+},
+{
+	"id":2,
+	"text":"Операция - Токарная",
+	"state":"closed",
+	"children":[{
+		"id":21,
+		"text":"operation "
+		}]
+}]

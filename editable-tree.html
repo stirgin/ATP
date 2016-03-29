@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>jQuery EasyUI</title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<!--<link rel="stylesheet" type="text/css" href="themes/icon.css">-->
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="jquery.etree.js"></script>
+
+
+<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+
+	<script type="text/javascript">
+		$(function(){
+			$('#tt').etree({
+			url: 'general.json',
+			createUrl: 'tree_data.json',
+			});
+
+			/*
+<ul  class="easyui-tree">
+        <li>
+            <span>Folder</span>
+            <ul>
+                <li>
+                    <span>Sub Folder 1</span>
+                    <ul>
+                        <li><span>File 11</span></li>
+                        <li><span>File 12</span></li>
+                        <li><span>File 13</span></li>
+                    </ul>
+                </li>
+                <li><span>File 2</span></li>
+                <li><span>File 3</span></li>
+            </ul>
+        </li>
+        <li><span>File21</span></li>
+    </ul>
+			*/
+			/*setInterval(function(){
+				removeIcon();
+			},100);*/
+		});
+	</script>
+</head>
+<body>
+<div class="cover">
+	<div class="content">
+		<header>
+			TreeView v1.0.0
+		</header>
+		<div class="work-place">
+			<div class="treeView">
+				<br>	
+				<ul id="tt"></ul>
+			</div>
+			<div class="operation-Place">
+				<div class="part1">
+				<br>
+					<div class="col-md-4">
+				      <label for="sel1">Операция</label>
+				      <select id="operations" class="form-control" id="sel1">
+				        <option data-id="-1">Выберите операцию</option>
+				      </select>
+				    </div>
+				    <div class="col-md-2">
+				    <button type="button" class="btn btn-default" onclick="addOperation()">Добавить</button>
+				    <br><br> 
+				    <button type="button" class="btn btn-default" onclick="removeit()">Удалить </button>
+				    <br><br>
+				    </div>
+				    <button type="button" class="btn btn-default" onclick="saveObj()">Сохранить все изменеия</button>
+				    <legend>Средства технологического оснащения</legend>
+				    <div class="col-md-2">
+				      <label for="sel1">Инструмент</label>
+				      <select class="form-control" id="sel11">
+				        <option data-id="-1">Резец</option>
+				        <option>Сверло</option>
+				        <option>Зенкер</option>
+				        <option>Молоток</option>
+				        <option>Напильник</option>
+				      </select>
+				    </div>
+				    <div class="col-md-3">
+				      <label for="sel1">Оснастка</label>
+				      <select class="form-control" id="sel12">
+				        <option data-id="-1">Патрон-трехкулачковый</option>
+				        <option>Тиски</option>
+				        <option>Поворотные столы</option>
+				        <option>Оправки</option>
+				      </select>
+
+				    </div>
+				    <div class="col-md-3">
+				      <label for="sel1">Ср-ва контроля</label>
+				      <select class="form-control" id="sel13">
+				        <option>Штангель-циркуль</option>
+				        <option>Шлангенглубиномер</option>
+				        <option>Калибры-пробки</option>
+				        <option>Нутромер</option>
+				      </select>
+				      				      <br>
+				      <button type="button" class="btn btn-default" onclick="add1()">Принять </button>
+				    </div>
+				    <div class="col-md-2">
+				    
+					</div>
+				</div>
+				<br><br>
+				<legend>Переход</legend>
+				<div  class="part2">
+					<div >
+						<div class="col-md-2">
+					      <label for="sel1">Действие</label>
+					      <select class="form-control" id="sel1">
+					        <option>Подрезать</option>
+					        <option>Вытянуть</option>
+					        <option>Вытянуть</option>
+					        <option>4</option>
+					      </select>
+					    </div>
+					    <div class="col-md-2">
+					      <label for="sel1">Объект</label>
+					      <select class="form-control" id="sel2">
+					        <option>Деталь</option>
+					        <option>Торец</option>
+					        <option>Буртик</option>
+					        <option>Канавка</option>
+					        <option>Конус</option>
+					        <option>Лыска</option>
+					      </select>
+					    </div>
+					</div>
+					<div>
+						<div class="col-md-1">
+						    <label for="inputsm">Идент.</label>
+						    <input class="form-control input-sm" id="inputsm1" type="text">
+						</div>
+						<div class="col-md-1">
+						    <label for="inputsm">Размер </label>
+						    <input class="form-control input-sm" id="inputsm2" type="text">
+						</div>
+						<div class="col-md-1">
+						    <label for="inputsm">1</label>
+						    <input class="form-control input-sm" id="inputsm3" type="text">
+						</div>
+						<div class="col-md-1">
+						    <label for="inputsm">Размер </label>
+						    <input class="form-control input-sm" id="inputsm4" type="text">
+						</div>
+						<div class="col-md-1">
+							<label for="inputsm">2</label>
+						    <input class="form-control input-sm" id="inputsm5" type="text">
+						</div>
+						<div class="col-md-1">
+						    <label for="inputsm">Размер </label>
+						    <input class="form-control input-sm" id="inputsm6" type="text">
+						</div>
+						<div class="col-md-1">
+						    <label for="inputsm">3</label>
+						    <input class="form-control input-sm" id="inputsm7" type="text">
+						</div>
+						<div class="col-md-1">
+						<br>
+							<button type="button" class="btn btn-default" onclick="add2()">Принять</button>
+						</div>
+					</div>
+				</div>
+						
+			</div>
+		</div>
+		<footer>
+			TreeView v1.0.0
+		</footer>
+	</div>
+</div>
+
+
+
+<script>
+var currOperation = 0;
+function removeIcon() {
+	$('.tree-folder').removeClass('tree-folder');
+	$('.tree-file').removeClass('tree-file');
+}
+
+var Obj = {
+	operations: 0,
+	tree: 1
+};
+$.ajax({
+	type: "GET",
+	url: "operations.json",
+	dataType: "json",
+	success: function (result) { 
+	Obj.operations = result;
+	$(Obj.operations.Operations).each(function (index, value) { 
+	  $('#operations').append('<option data-id=' + $(this).attr("id") + '>' + $(this).attr('name') + '</option>');
+	});
+	$('#operations option[data-id=-1]').remove();
+	currOperation = $('#operations option:selected').attr('data-id');
+	}
+});
+
+$.ajax({
+	type: "GET",
+	url: "part.json",
+	dataType: "json",
+	success: function (result) { 
+	Obj.part = result;
+	}
+});
+
+$.ajax({
+	type: "GET",
+	url: "opGroup.json",
+	dataType: "json",
+	success: function (result) { 
+	Obj.group = result;
+	$('#operations').change();
+	}
+});
+
+$.ajax({
+	type: "GET",
+	url: "tree_data.json",
+	dataType: "json",
+	success: function (result) { 
+	Obj.tree = result;
+	console.log(Obj.tree);
+	}
+});
+
+Obj.tree.save = function() {
+var	templateNode = {
+		id:0,
+		text:'',
+		children:[{
+		}]
+	},
+	tree = [];
+
+var treeLength = $('.tree-node').length;	
+}
+
+function addOperation(child){
+	var str = 1;
+    var t = $('#tt');
+    var node = t.tree('getSelected');
+    var tree = {
+        parent: null,
+        data: [{
+            text: 'Операция - ' + $('#operations option:selected').val(),
+            cildren: [{}]
+        }]
+    }
+
+     if(str == ''){
+    	delete tree.children;
+    }
+
+    t.tree('append', tree);
+//removeIcon();
+   
+}
+
+function removeit() {
+    var node = $('#tt').tree('getSelected');
+    $('#tt').tree('remove', node.target);
+}
+
+$('#operations').change(function(e) {
+	var o1 = Obj.group.OperationsGroup,
+		o2 = Obj.part.partOfOperation,
+		l1 = Obj.group.OperationsGroup.length,
+		l2 = Obj.part.partOfOperation.length;
+		var oper;
+	
+	for(var i = 0; i < l1; i++){
+		if(o1[i].id == $('#operations option:selected').attr('data-id')){
+			oper = o1[i].operationGroup.split(',')
+		}
+	}
+	$('#sel1 option').remove();
+	for(var j = 0; j < oper.length; j++) {
+		for(var i = 0; i < l2; i++) {
+			if(o2[i].id == oper[j]) {
+				$('#sel1').append('<option data-id=' + o2[i].id + '>' + o2[i].name + '</option>');
+			}
+		}
+	}
+
+})
+
+function add1() {
+    var t = $('#tt');
+    var node = t.tree('getSelected');
+    var tree = {
+        parent: (node?node.target:null),
+        data: [{
+            text: $('#sel11 option:selected').val() + " " + $('#sel12 option:selected').val() + ' ' + $('#sel13').val(),
+        }]
+    }
+    t.tree('append', tree);
+}
+
+function add2() {
+    var t = $('#tt');
+    var node = t.tree('getSelected');
+    var tree = {
+        parent: (node?node.target:null),
+        data: [{
+            text: $('#sel1').val() + " " + $('#sel2').val() + ' ' + $('#inputsm1').val() + ' ' + $('#inputsm2').val()
+             + ' ' + $('#inputsm3').val() + ' ' + $('#inputsm4').val() + ' ' + $('#inputsm5').val() + ' ' + $('#inputsm6').val() + ' ' + $('#inputsm7').val(),
+        }]
+    }
+    t.tree('append', tree);
+    console.log(str = (node?node.target:null));
+}
+
+
+function saveObj(){
+var	templateNode = {
+		id:0,
+		text:'',
+		children:[{
+		}]
+	},
+	array = [];
+	var l1 =  $('#tt').children();
+
+	for(var i = 0; i< l1.length ;i++) {
+		array.push({
+			id: $($('#tt').children()[i]).find('div').attr('node-id'),
+			text: $($($('#tt').children()[i]).find('div')[0]).find('.tree-title').text(),
+			children:[]
+		})
+	}
+	var l2 = 0;
+	$(l1[i]).find('ul')
+	for(var i = 0; i< array.length ;i++) {
+ 		l2 =  $(l1[i]).find('ul li');
+ 		if(l2.length)
+		for(var j = 0; j< l2.length ;j++){
+			array[i].children.push({
+			id: $(l2[j]).find('div').attr('node-id'),
+			text:$($(l2[j]).find('div')[0]).find('.tree-title').text()
+			})
+		}
+	}
+	
+$.ajax
+    ({
+        type: "GET",
+        dataType : 'json',
+        async: false,
+        url: 'http://tree/save_json.php',
+        data: { data: JSON.stringify(array) },
+        success: function () {alert("Thanks!"); },
+        failure: function() {alert("Error!");}
+    });
+}
+
+//JSON.stringify();
+//JSON.parse();
+</script>	
+</body>
+</html>
